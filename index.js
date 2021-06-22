@@ -2,7 +2,7 @@ const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
-
+const teamData = [];
 const inquirer = require('inquirer');
 const fs = require('fs');
 
@@ -115,6 +115,11 @@ const initPrompt = () =>{
             type: 'input',
             name: 'id',
             message: "What's their employee ID?",
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "What's the team manager's email address?",
         },
         {
             type: 'input',
