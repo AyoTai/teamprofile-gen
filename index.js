@@ -103,4 +103,33 @@ const promptIntern = async () =>{
     addNewPrompt();
 };
 
+// starting prompts
+const initPrompt = () =>{
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: "What's the team manager's name?",
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: "What's their employee ID?",
+        },
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: "What's the team manager's office number?",
+        }
+    ])
+    .then(response =>{
+        const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
+        teamData.push(manager);
+    })
+}
 
+initPrompt()
+.then(addNewPrompt)
+.catch(err =>{
+    console.log(err);
+})
