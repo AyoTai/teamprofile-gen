@@ -4,7 +4,9 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const teamData = [];
 const inquirer = require('inquirer');
+const generatePage = require('./src/template');
 const fs = require('fs');
+
 
 const prompts = [
     {

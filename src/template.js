@@ -1,7 +1,7 @@
-const Employee = requirer('./lib/Employee');
-const Manager = requirer('./lib/Manager');
-const Engineer = requirer('./lib/Engineer');
-const Intern = requirer('./lib/Intern');
+const Employee = require('../lib/Employee');
+const Manager = require('../lib/Manager');
+const Engineer = require('../lib/Engineer');
+const Intern = require('../lib/Intern');
 
 // Getting different role infomation
 function roleInfo(employee){
