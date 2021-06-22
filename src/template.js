@@ -5,9 +5,9 @@ const Intern = require('../lib/Intern');
 
 // Getting different role infomation
 function roleInfo(employee){
-    if(employee.getRole() ==='Manager'){
+    if(employee.getRole() ==='&#9749 Manager'){
         return `Office Number: ${employee.getOfficeNumber()}`;
-    }else if(employee.getRole() === 'Engineer'){
+    }else if(employee.getRole() === '&#128083 Engineer'){
         return `Github: <a target="_blank" href="https://github.com/${employee.getGithub()}">${employee.getGithub()}</a>`;
     }else{
         return `School: ${employee.getSchool()}`;

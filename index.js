@@ -30,7 +30,7 @@ const prompts = [
 // to generate html
 const writeToFile = (fileName, teamData) =>{
     return new Promise((Res, rej) =>{
-        fs.writeFile('./dist/team.html'), (fileName, teamData), err =>{
+        fs.writeFile('./dist/team.html', (fileName, teamData), err =>{
             if(err){
                 rej(err);
                 return;
@@ -39,7 +39,7 @@ const writeToFile = (fileName, teamData) =>{
                 ok: true,
                 message: 'Success! You have created the html.'
             })
-        }
+        })
     })
 }
 
