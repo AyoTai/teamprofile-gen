@@ -72,3 +72,35 @@ const addNewPrompt = () =>{
         }
     })
 }
+
+// engineer prompts
+const promptEngineer = async () =>{
+    let response = await inquirer.prompt([
+        ...prompts,
+        {
+            type: 'input',
+            name: 'github',
+            message: "What's the engineer's github username?"
+        }
+    ])
+    const engineer = new Engineer(response.name, response.id, response.email, response.github);
+    teamData.push(engineer);
+    addNewPrompt();
+};
+
+// intern prompts
+const promptIntern = async () =>{
+    let response = await inquirer.prompt([
+        ...prompts,
+        {
+            type: 'input',
+            name: 'school',
+            message: "Which school does the intern attend?",
+        }
+    ])
+    const intern = new Intern(response.name, response.id, response.email, response.school);
+    teamData.push(intern);
+    addNewPrompt();
+};
+
+
